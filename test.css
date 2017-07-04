@@ -1,9 +1,11 @@
-body {
-    width: 1000px;
-    margin: auto;
+body > section {
+    width: 500px;
+    
+    margin: 40px auto;
+    background-color: white,
 }
 
-input[type="text"] { width: 400px }
+input[type="text"] { width: 50%; }
 textarea {
     width: 100%;
     max-width: 100%;
