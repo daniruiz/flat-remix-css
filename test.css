@@ -1,0 +1,12 @@
+body {
+    width: 1000px;
+    margin: auto;
+}
+
+input[type="text"] { width: 400px }
+textarea {
+    width: 100%;
+    max-width: 100%;
+    height: 400px;
+}
+input[type="text"], textarea { margin 7px; }
