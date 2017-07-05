@@ -2,4 +2,6 @@
 
 A simple css library with some predefined "Flat" elements that I like to use
 
-See it: https://htmlpreview.github.io/?https://github.com/daniruiz/Flat-Remix-CSS-library/blob/master/test.html
+Try it: https://htmlpreview.github.io/?https://github.com/daniruiz/Flat-Remix-CSS-library/blob/master/test.html
+
+![Screenshot 1](https://github.com/daniruiz/Flat-Remix-CSS-library/blob/master/Images/1.png?raw=true)
