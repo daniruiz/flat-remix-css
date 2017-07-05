@@ -5,15 +5,20 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="css/flat-remix.css">
         <link rel="stylesheet" type="text/css" href="test.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
     </head>
     <body>
+        <header class="with-shadow"></header>
+
         <section class="paper">
-            <input type="text" placeholder="Text goes here">
+            <h5>Express yourshelf</h5>
+            <input type="text" placeholder="<< Text goes here >>">
             <textarea placeholder="Write here"></textarea>
         </section>
 
         <section class="paper">
-            <h4>• Select them all</h4>
+            <h6>• Select them all</h6>
             <label><input type="checkbox" name="checkbox" checked> Select me</label>
             <label><input type="checkbox" name="checkbox"> Select me</label>
             <label><input type="checkbox" name="checkbox"> Select me</label>
@@ -22,9 +27,9 @@
             <br>
             <br>
 
-            <h4>• Just select one</h4>
+            <h6>• Just select one</h6>
+            <label><input type="radio" name="radius" > Select me</label>
             <label><input type="radio" name="radius" checked> Select me</label>
-            <label><input type="radio" name="radius"> Select me</label>
             <label><input type="radio" name="radius"> Select me</label>
             <label><input type="radio" name="radius"> Select me</label>
 
@@ -40,9 +45,61 @@
             <div class="rounded-button"></div>
         </section>
 
-        <section>
+        <hr>
+
+        <section class="selectable">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dictum suscipit faucibus. Nunc eget est eget leo volutpat eleifend. Mauris placerat risus a ligula suscipit, id posuere purus egestas. Maecenas commodo tempus metus, porta lobortis diam tincidunt eget. Cras porttitor mi quis nibh varius iaculis. Aenean elementum malesuada felis id posuere. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam diam justo, placerat id nulla vel, lacinia fermentum libero. Vivamus rutrum mollis egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam sed ultricies nunc. Curabitur vestibulum viverra rutrum. Etiam imperdiet arcu id urna sagittis porttitor. Curabitur mollis sapien massa, a lobortis risus semper at.
         </section>
+        <hr>
+
+        <section>
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+        </section>
+        <section class="paper">
+            <h5>But, when?</h5>
+            <label class="checktext"><input type="radio" name="hour"><span>09:00</span></label>
+            <label class="checktext"><input type="radio" name="hour"><span>09:30</span></label>
+            <label class="checktext"><input type="radio" name="hour"><span>10:00</span></label>
+            <label class="checktext"><input type="radio" name="hour"><span>09:30</span></label>
+            <label class="checktext"><input type="radio" name="hour"><span>11:00</span></label>
+            <label class="checktext"><input type="radio" name="hour"><span>09:30</span></label>
+            <label class="checktext"><input type="radio" name="hour"><span>12:00</span></label>
+            <label class="checktext"><input type="radio" name="hour"><span>09:30</span></label>
+            <label class="checktext"><input type="radio" name="hour"><span>13:00</span></label>
+            <label class="checktext"><input type="radio" name="hour"><span>13:30</span></label>
+            <label class="checktext"><input type="radio" name="hour"><span>14:00</span></label>
+            <label class="checktext"><input type="radio" name="hour"><span>14:30</span></label>
+            <label class="checktext"><input type="radio" name="hour"><span>15:00</span></label>
+            <label class="checktext"><input type="radio" name="hour"><span>15:30</span></label>
+            <label class="checktext"><input type="radio" name="hour"><span>16:00</span></label>
+            <label class="checktext"><input type="radio" name="hour"><span>16:30</span></label>
+            <label class="checktext"><input type="radio" name="hour"><span>17:00</span></label>
+            <label class="checktext"><input type="radio" name="hour" checked><span>17:30</span></label>
+            <label class="checktext"><input type="radio" name="hour"><span>18:00</span></label>
+            <label class="checktext"><input type="radio" name="hour"><span>18:30</span></label>
+            <label class="checktext"><input type="radio" name="hour"><span>19:00</span></label>
+            <label class="checktext"><input type="radio" name="hour"><span>19:30</span></label>
+            <label class="checktext"><input type="radio" name="hour"><span>20:00</span></label>
+            <label class="checktext"><input type="radio" name="hour"><span>20:30</span></label>
+            <label class="checktext"><input type="radio" name="hour"><span>21:00</span></label>
+            <label class="checktext"><input type="radio" name="hour"><span>21:30</span></label>
+            <label class="checktext"><input type="radio" name="hour"><span>22:00</span></label>
+            <label class="checktext"><input type="radio" name="hour"><span>22:30</span></label>
+            <label class="checktext"><input type="radio" name="hour"><span>23:00</span></label>
+        </section>
+
+        <script>
+            $(window).scroll(function(){
+                var scroll = $(this).scrollTop();
+                $('header').height(250 - scroll*0.5);
+            });
+            $('.blue-button, .red-button, .green-button').click(function(){
+                $(this).toggleClass("active");
+            });
+        </script>
     </body>
 </html>
 

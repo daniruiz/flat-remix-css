@@ -1,8 +1,16 @@
+body { padding-bottom: 100px; }
 body > section, .paper {
     width: 500px;
     margin: 40px auto;
 }
-
+header {
+    position: absolute;
+    height: 250px;
+    width: 100%;
+    background: #3E50B4;
+    top: 0;
+    z-index: -1;
+}
 input[type="text"] { width: 50%; }
 textarea {
     width: 100%;
@@ -10,4 +18,9 @@ textarea {
     height: 200px;
 }
 input[type="text"], textarea { margin 7px; }
-label { width: 228px; }
+label { width: 227px; }
+
+.blue-button, .red-button, .green-button {
+    float: left;
+    margin: 10px;
+}

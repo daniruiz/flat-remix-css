@@ -21,10 +21,7 @@ granate-borde: #551419
 
 */
 
-@font-face {
-    font-family: 'Roboto';
-    src: url("/css/fonts/Roboto-Regular.ttf");
-}
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     opacity: 1;
@@ -59,22 +56,6 @@ input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
     opacity: .2;
 }
 
-label {
-    cursor: pointer;
-    display: inline-block;
-    padding: 9px 0;
-}
-h4 {
-    margin-left: 30px;
-    margin-bottom: 10px;
-}
-section {
-    letter-spacing: 0.2px;
-    font-size: 13px;
-    line-height: 24px;
-}
-
-
 * {
     box-sizing: border-box;
     -webkit-appearance: none;
@@ -96,18 +77,54 @@ body {
     color: #5c616c;
     margin: 0;
     font-size: 16px;
+    position: absolute;
+    width: 100%;
 }
 
-.paper {
-    font-size: 16px;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
-    padding: 10px 20px;
-    background-color: white;
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 9px 0;
+}
+h1 {
+    font-size: 50px;
+    font-weight: lighter;
+}
+h2 {
+    font-size: 40px;
+    font-weight: lighter;
+}
+h3 {
+    font-size: 32px;
+    font-weight: lighter;
+}
+h4 {
+    font-size: 26px;
+    font-weight: lighter;
+}
+h5 {
     margin-top: 20px;
-    min-height: 100px;
-    color: black;
-    letter-spacing: 0px;
-    line-height: normal;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+h6 {
+    padding-left: 30px;
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+section {
+    letter-spacing: 0.2px;
+    font-size: 13px;
+    line-height: 24px;
+    overflow: auto;
+}
+hr {
+    width: 50%;
+    border: 3px solid #5c616c;
+    background-color: #5c616c;
+    border-radius: 4px;
 }
 
 input[type=text], textarea, input[type=checkbox], input[type=radio] {
@@ -122,8 +139,6 @@ input[type=text], textarea {
     padding: 0 10px;
     font-size: 14px;
     font-weight: bold;
-    transition: background .2s, box-shadow .2s, color .2s, border-color, .2s;
-    -webkit-transition: background .2s, box-shadow .2s, color .2s, border-color, .2s;
     cursor: text;
 }
 input[type=checkbox], input[type=radio] {
@@ -141,9 +156,28 @@ input[type=checkbox] { border-radius: 2px; }
 input[type=radio] { border-radius: 20px; }
 textarea { padding: 10px; }
 
+label.checktext {
+    width: auto; 
+    padding: 0;
+}
+label.checktext input { display: none; }
+label.checktext span {
+    display: inline-block;
+    cursor: pointer;
+    color: #5c616c;
+    border-bottom: 2px solid #5c616c;
+    margin: 10px;
+}
+label.checktext input:checked + span {
+    color: black;
+    font-weight: bold;
+    font-size: 40px;
+    border-bottom: 5px solid #1875D1;
+}
+
 .blue-button, .red-button, .green-button {
-    border-radius: 5px!important;
-    font-weight: bold !important;
+    border-radius: 5px;
+    font-weight: bold;
     color: white;
     margin-top: 5px;
     text-align: center;
@@ -153,7 +187,18 @@ textarea { padding: 10px; }
     width: 130px;
     border: 3px solid;
     line-height: 40px;
-    display: inline-block;
+    display: block;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+    transition: .3s;
+}
+.blue-button:hover, .red-button:hover, .green-button:hover {
+    letter-spacing: 1px;
+}
+.blue-button:active, .red-button:active, .green-button:active, .blue-button.active, .red-button.active, .green-button.active {
+    box-shadow: none;
+    border-color: black;
+    color: black;
+    background: white;
 }
 .blue-button {
     background: #1875D1;
@@ -168,7 +213,31 @@ textarea { padding: 10px; }
     border-color: #00756a;
 }
 
-
 .rounded-button {
 
+}
+
+.paper {
+    font-size: 16px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+    padding: 10px 20px;
+    background-color: white;
+    margin-top: 20px;
+    min-height: 100px;
+    color: black;
+    letter-spacing: 0px;
+    line-height: normal;
+}
+
+.with-shadow {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.selectable {
+    cursor: text;
+    user-select: auto;
+}
+::selection {
+    color: white;
+    background: black;
 }
