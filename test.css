@@ -24,3 +24,7 @@ label { width: 227px; }
     float: left;
     margin: 10px;
 }
+.rounded-button {
+    float: left;
+    margin: 48px;
+}
