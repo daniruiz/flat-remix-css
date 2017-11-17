@@ -144,7 +144,10 @@ input[type=checkbox], input[type=radio] {
 input[type=checkbox]:checked, input[type=radio]:checked { background: #1875D1 }
 input[type=checkbox] { border-radius: 2px; }
 input[type=radio] { border-radius: 20px; }
-textarea { padding: 10px; }
+textarea {
+	padding: 10px;
+	height: 200px
+}
 
 label.checktext {
     width: auto; 
