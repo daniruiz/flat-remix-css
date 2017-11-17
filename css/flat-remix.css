@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     opacity: 1;
     -webkit-transition: opacity .2s;
@@ -106,7 +104,7 @@ h6 {
     line-height: 24px;
 }
 
-section {
+section, .section {
     letter-spacing: 0.2px;
     font-size: 13px;
     line-height: 24px;
@@ -215,6 +213,7 @@ label.checktext input:checked + span {
     font-size: 30px;
     line-height: 56px;
     text-align: center;
+    color: white;
 }
 
 .paper {
@@ -233,11 +232,19 @@ label.checktext input:checked + span {
     box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
 }
 
-.selectable, .selectable * {
-    cursor: text;
-    user-select: auto;
+.selectable,.selectable * {
+  cursor: text;
+  user-select: text;
+  -webkit-touch-callout: text;
+  -webkit-user-select: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
 }
+
 ::selection {
-    color: white;
-    background: black;
+  color: #fff;
+  background: #000;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');

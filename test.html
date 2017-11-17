@@ -4,9 +4,38 @@
         <title>FLAT REMIX css</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="css/flat-remix.css">
-        <link rel="stylesheet" type="text/css" href="test.css">
+        <style>
+        	body { padding-bottom: 100px; }
+			body > section, .paper {
+				width: 500px;
+				margin: 40px auto;
+			}
+			header {
+				position: absolute;
+				height: 250px;
+				width: 100%;
+				background: #3E50B4;
+				top: 0;
+				z-index: -1;
+			}
+			input[type="text"] { width: 50%; }
+			textarea {
+				width: 100%;
+				max-width: 100%;
+				height: 200px;
+			}
+			input[type="text"], textarea { margin 7px; }
+			label { width: 227px; }
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+			.blue-button, .red-button, .green-button {
+				float: left;
+				margin: 10px;
+			}
+			.rounded-button {
+				float: left;
+				margin: 48px;
+			}
+        </style> 
     </head>
     <body>
         <header class="with-shadow"></header>
@@ -40,15 +69,21 @@
             <buton class="green-button">enter</buton>
             <buton class="red-button">exit</buton>
 
-            <div class="rounded-button"></div>
-            <div class="rounded-button"></div>
-            <div class="rounded-button"></div>
+            <div class="rounded-button" style="background-color:#1875D1">+</div>
+            <div class="rounded-button" style="background-color:#1BA18C">?</div>
+            <div class="rounded-button" style="background-color:#A32C36;
+		        -webkit-transform: rotate(-45deg); 
+		           -moz-transform: rotate(-45deg); 
+		             -o-transform: rotate(-45deg);
+		                transform: rotate(-45deg);">
+    			&#9906;
+    		</div>
         </section>
 
         <hr>
 
         <section class="selectable">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dictum suscipit faucibus. Nunc eget est eget leo volutpat eleifend. Mauris placerat risus a ligula suscipit, id posuere purus egestas. Maecenas commodo tempus metus, porta lobortis diam tincidunt eget. Cras porttitor mi quis nibh varius iaculis. Aenean elementum malesuada felis id posuere. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam diam justo, placerat id nulla vel, lacinia fermentum libero. Vivamus rutrum mollis egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam sed ultricies nunc. Curabitur vestibulum viverra rutrum. Etiam imperdiet arcu id urna sagittis porttitor. Curabitur mollis sapien massa, a lobortis risus semper at.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dictum suscipit faucibus. Nunc eget est eget leo volutpat eleifend. Mauris placerat risus a ligula suscipit, id posuere purus egestas. Maecenas commodo tempus metus, porta lobortis diam tincidunt eget. Cras porttitor mi quis nibh varius iaculis. Aenean elementum malesuada felis id posuere. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam diam justo, placerat id nulla vel, <a href="#">lacinia fermentum</a> libero. Vivamus rutrum mollis egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam sed ultricies nunc. Curabitur vestibulum viverra rutrum. Etiam imperdiet arcu id urna sagittis porttitor. Curabitur mollis sapien massa, a lobortis risus semper at.
         </section>
         <hr>
 
@@ -92,13 +127,10 @@
         </section>
 
         <script>
-            $(window).scroll(function(){
-                var scroll = $(this).scrollTop();
-                $('header').height(250 - scroll*0.5);
-            });
-            $('.blue-button, .red-button, .green-button').click(function(){
-                $(this).toggleClass("active");
-            });
+            window.addEventListener('scroll', function() {
+				scroll = window.scrollY;
+				document.getElementsByTagName('header')[0].style.height = 250 - scroll*0.5 + "px";
+			});
         </script>
     </body>
 </html>
