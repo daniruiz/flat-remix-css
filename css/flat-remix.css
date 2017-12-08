@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400');
+
+
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     opacity: 1;
     -webkit-transition: opacity .2s;
@@ -44,11 +47,11 @@ input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
     -moz-user-select: none;
     -ms-user-select: none;
     cursor: default;
-    font-family: "Roboto", sans-serif;    
 }
 
 body {
     background-color: #fafafa;
+    font-family: "Roboto", sans-serif;    
     color: #5c616c;
     margin: 0;
     font-size: 16px;
@@ -61,7 +64,9 @@ a:link, a:visited, a:active {
     cursor: pointer;
 }
 
-a:hover { border-bottom: 2px solid; }
+a * { cursor: pointer; }
+
+a:hover { text-decoration: underline}
 
 label {
     cursor: pointer;
@@ -104,11 +109,16 @@ h6 {
     line-height: 24px;
 }
 
-section, .section {
+section, article, .section, .article {
     letter-spacing: 0.2px;
     font-size: 13px;
     line-height: 24px;
     overflow: auto;
+}
+
+section, article, .section, .article, .paper {
+    word-wrap: break-word;
+    word-break: break-word;
 }
 
 hr {
@@ -214,7 +224,7 @@ label.checktext input:checked + span {
     border-radius: 100%;
     z-index: 10;
     font-size: 30px;
-    line-height: 56px;
+    line-height: 53px;
     text-align: center;
     color: white;
 }
@@ -249,5 +259,3 @@ label.checktext input:checked + span {
   color: #fff;
   background: #000;
 }
-
-@import url('https://fonts.googleapis.com/css?family=Roboto');
