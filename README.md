@@ -6,14 +6,14 @@
 
 A simple css library with some predefined "Flat" elements that I like to use
 
-#### Try it:
-**https://htmlpreview.github.io/?https://github.com/daniruiz/Flat-Remix-CSS-library/blob/master/test.html**
+# [Try it](https://https://ethenis.drasite.com/flat-remix-css)
 
 ![Screenshot 1](https://github.com/daniruiz/Flat-Remix-CSS-library/blob/master/Images/1.png?raw=true)
 
 
-**Projects where I used it**  
- https://assafpb.com/noticias  
- https://github.com/daniruiz/Consulter  
+## Projects where I used it  
+**https://assafpb.com/noticias**  
+**https://github.com/daniruiz/Consulter**  
+**https://ethenis.drasite.com**  
  
  ![Consulter screenshot](https://github.com/daniruiz/Consulter/raw/master/Imagenes/3.png?raw=true)
