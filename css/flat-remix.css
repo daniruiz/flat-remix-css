@@ -255,6 +255,11 @@ label.checktext input:checked + span {
   -ms-user-select: text;
 }
 
+::-moz-selection {
+  color: #fff;
+  background: #000;
+}
+
 ::selection {
   color: #fff;
   background: #000;
