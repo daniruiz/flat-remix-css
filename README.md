@@ -6,7 +6,7 @@
 
 ### A simple css library with some predefined "Flat" elements that I like to use
 
-# [Try it](https://https://ethenis.drasite.com/flat-remix-css)
+# [Try it](https://ethenis.drasite.com/flat-remix-css)
 
 ![Screenshot 1](https://github.com/daniruiz/Flat-Remix-CSS-library/blob/master/Images/1.png?raw=true)
 
