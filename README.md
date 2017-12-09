@@ -4,7 +4,7 @@
 <hr>
 <br>
 
-A simple css library with some predefined "Flat" elements that I like to use
+### A simple css library with some predefined "Flat" elements that I like to use
 
 # [Try it](https://https://ethenis.drasite.com/flat-remix-css)
 
@@ -15,5 +15,6 @@ A simple css library with some predefined "Flat" elements that I like to use
 **https://assafpb.com/noticias**  
 **https://github.com/daniruiz/Consulter**  
 **https://ethenis.drasite.com**  
+ <br>
  
  ![Consulter screenshot](https://github.com/daniruiz/Consulter/raw/master/Imagenes/3.png?raw=true)
