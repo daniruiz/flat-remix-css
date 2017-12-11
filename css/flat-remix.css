@@ -64,7 +64,7 @@ a:link, a:visited, a:active {
     cursor: pointer;
 }
 
-a * { cursor: pointer; }
+a * { cursor: pointer!important; }
 
 a:hover { text-decoration: underline}
 
