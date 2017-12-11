@@ -246,7 +246,7 @@ label.checktext input:checked + span {
 }
 
 .selectable,.selectable * {
-  cursor: text;
+  cursor: auto;
   user-select: text;
   -webkit-touch-callout: text;
   -webkit-user-select: text;
