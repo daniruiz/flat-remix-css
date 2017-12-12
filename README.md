@@ -1,4 +1,4 @@
-# [Flat-Remix-CSS-library](https://ethenis.drasite.com/flat-remix-css)
+# [Flat-Remix-CSS-library](http://drasite.com/flat-remix-css)
 
 ###### Flat-Remix is licensed under the GNU General Public License v3.0
 <hr>
@@ -10,11 +10,8 @@
 
 
 ## Projects where I used it  
-**https://assafpb.com/noticias**  
-<br>
-**https://github.com/daniruiz/Consulter**  
-<br>
-**https://ethenis.drasite.com**  
- <br>
- 
- ![Consulter screenshot](https://github.com/daniruiz/Consulter/raw/master/Imagenes/3.png?raw=true)
+* **https://drasite.com**
+* **https://ethenis.drasite.com**
+* **https://assafpb.com/noticias**
+* **https://github.com/daniruiz/Consulter**
+
