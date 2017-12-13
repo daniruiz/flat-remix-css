@@ -1,6 +1,6 @@
 # [Flat-Remix-CSS-library](http://drasite.com/flat-remix-css)
 
-###### Flat-Remix is licensed under the GNU General Public License v3.0
+###### Flat-Remix is licensed under the MIT License
 <hr>
 <br>
 
