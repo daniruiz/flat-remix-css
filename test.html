@@ -5,132 +5,211 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="css/flat-remix.css">
         <style>
-        	body { padding-bottom: 100px; }
-			body > section, .paper {
-				width: 500px;
-				margin: 40px auto;
+			body {
+				padding-bottom: 100px;
+			}
+			@keyframes animate {
+				0%, 40%, 100% {
+				    transform: scale(1);
+				}
+				10% {
+				    transform: scale(1.3);
+				}
 			}
 			header {
-				position: absolute;
-				height: 250px;
+			    position: absolute;
+				height: 500px;
 				width: 100%;
-				background: #3E50B4;
+				left: 50%;
+				transform: translateX(-50%);
+				background: linear-gradient(203deg, rgba(124,69,152,1) 17%, rgb(34, 0, 221) 100%);
 				top: 0;
 				z-index: -1;
+				will-change: height;
 			}
-			input[type="text"] { width: 50%; }
+			a.blue-button-link {
+			    line-height: 50px;
+				border-radius: 2px;
+				background: blue;
+				width: 236px;
+				text-align: center;
+				margin: 30px auto;
+				text-shadow: 0 0 1px white;
+				color: white;
+				display: block;
+			}
+			#palette {
+				text-align: center;
+			}
+			#palette div {
+				animation: animate 6s infinite ease-in-out;
+				width: 30px;
+				height: 50px;
+				display: inline-block;
+				border-bottom: 7px solid black;
+				will-change: transform;
+				box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+			}
+			section, .paper {
+				max-width: 500px;
+				margin: 40px auto;
+				width: 95%;
+				position: relative;
+			}
+			input[type="text"] {
+				width: 50%;
+				min-width: 165px;
+			}
 			textarea {
 				width: 100%;
 				max-width: 100%;
 			}
-			input[type="text"], textarea { margin 7px; }
-			label { width: 227px; }
+			input[type="text"], textarea { margin: 7px; }
+			label { width: 225px; }
 
 			.blue-button, .red-button, .green-button {
-				float: left;
+				display: inline-block;
 				margin: 10px;
 			}
 			.rounded-button {
-				float: left;
-				margin: 48px;
+				position: absolute;
+				bottom: -28px;
+				right: 30px;
 			}
-        </style> 
+			.onoffswitch {
+				margin: 20px;
+				vertical-align: middle;
+			}
+		</style>
+        <script>
+        	window.onload = function() {
+        		function headerAnimation() {
+					scroll = window.scrollY;
+					document.getElementsByTagName( 'header' )[0].style.height = 500 - scroll*0.5 + "px";
+				}
+        		window.addEventListener( 'scroll', headerAnimation );
+        	}
+        </script>
     </head>
     <body>
         <header class="with-shadow"></header>
 
         <section class="paper">
-            <h5>Express yourshelf</h5>
-            <input type="text" placeholder="<< Text goes here >>">
-            <textarea placeholder="Write here"></textarea>
-        </section>
+			<h1>Flat Remix<br> CSS Library</h1>
+			<hr>
+			<h4 style="padding: 0 30px;text-align: center;">
+				Flat Remix is a simple css library with some predefined "Flat" elements that I like to use
+			</h4>
+			<a href="https://raw.githubusercontent.com/daniruiz/Flat-Remix-CSS-library/master/css/flat-remix.css" target="_blank" class="with-shadow blue-button-link">↧ Download Flat-Remix.css</a>
+			<a style="font-size:20px;display: block;text-align: center;" href="https://github.com/daniruiz/Flat-Remix-CSS-library" target="_blank">
+				github.com/daniruiz/Flat-Remix-CSS-library
+			</a><br>
+			<hr>
+			<h6>Flat-Remix CSS Library is licensed under the MIT License</h6>
+		</section>
+		<hr>
+		<section>
+			<h2>Demo</h2>
+			<div id="palette">
+				<div style="
+				        background: #0000ff;animation-delay: 1.3s;"></div><div style="
+				        background: #3873d7;animation-delay: 1.5s;"></div><div style="
+				        background: #269687;animation-delay: 1.7s;"></div><div style="
+				        background: #ba174e;animation-delay: 1.9s;"></div><div style="
+				        background: #9f2b32;animation-delay: 2.1s;"></div><div style="
+				        background: #7c4598;animation-delay: 2.3s;"></div>
+			</div>
+		</section>
+		<section class="paper">
+			<h5>Express yourshelf</h5>
+			<input type="text" placeholder="<< Text goes here >>">
+			<textarea placeholder="Write here"></textarea>
+			<div class="rounded-button">+</div>
+		</section>
 
-        <section class="paper">
-            <h6>• Select them all</h6>
-            <label><input type="checkbox" name="checkbox" checked> Select me</label>
-            <label><input type="checkbox" name="checkbox"> Select me</label>
-            <label><input type="checkbox" name="checkbox"> Select me</label>
-            <label><input type="checkbox" name="checkbox"> Select me</label>
+		<section class="paper">
+			<h6>• Select them all</h6>
+			<label><input type="checkbox" name="checkbox" checked> Select me</label>
+			<label><input type="checkbox" name="checkbox"> Select me</label>
+			<label><input type="checkbox" name="checkbox"> Select me</label>
+			<label><input type="checkbox" name="checkbox"> Select me</label>
 
-            <br>
-            <br>
+			<br>
+			<br>
 
-            <h6>• Just select one</h6>
-            <label><input type="radio" name="radius" > Select me</label>
-            <label><input type="radio" name="radius" checked> Select me</label>
-            <label><input type="radio" name="radius"> Select me</label>
-            <label><input type="radio" name="radius"> Select me</label>
+			<h6>• Just select one</h6>
+			<label><input type="radio" name="radius" > Select me</label>
+			<label><input type="radio" name="radius" checked> Select me</label>
+			<label><input type="radio" name="radius"> Select me</label>
+			<label><input type="radio" name="radius"> Select me</label>
 
-            <br>
-            <br>
+			<br>
+			<br>
+			
+			<div style="text-align:center">
+				<button class="blue-button">save</button>
+				<button class="green-button">enter</button>
+				<button class="red-button">exit</button>
+			</div>
+		</section>
 
-            <buton class="blue-button">save</buton>
-            <buton class="green-button">enter</buton>
-            <buton class="red-button">exit</buton>
+		<hr>
 
-            <div class="rounded-button" style="background-color:#1875D1">+</div>
-            <div class="rounded-button" style="background-color:#1BA18C">?</div>
-            <div class="rounded-button" style="background-color:#A32C36;
-		        -webkit-transform: rotate(-45deg); 
-		           -moz-transform: rotate(-45deg); 
-		             -o-transform: rotate(-45deg);
-		                transform: rotate(-45deg);">
-    			&#9906;
-    		</div>
-        </section>
+		<section class="selectable">
+			<h2>Selectable text</h2>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dictum suscipit faucibus. Nunc eget est eget leo volutpat eleifend. Mauris placerat risus a ligula suscipit, id posuere purus egestas. Maecenas commodo tempus metus, porta lobortis diam tincidunt eget. Cras porttitor mi quis nibh varius iaculis. Aenean elementum malesuada felis id posuere. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam diam justo, placerat id nulla vel, <a href="#">lacinia fermentum</a> libero. Vivamus rutrum mollis egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam sed ultricies nunc. Curabitur vestibulum viverra rutrum. Etiam imperdiet arcu id urna sagittis porttitor. Curabitur mollis sapien massa, a lobortis risus semper at.
+		</section>
+		<hr>
 
-        <hr>
-
-        <section class="selectable">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dictum suscipit faucibus. Nunc eget est eget leo volutpat eleifend. Mauris placerat risus a ligula suscipit, id posuere purus egestas. Maecenas commodo tempus metus, porta lobortis diam tincidunt eget. Cras porttitor mi quis nibh varius iaculis. Aenean elementum malesuada felis id posuere. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam diam justo, placerat id nulla vel, <a href="#">lacinia fermentum</a> libero. Vivamus rutrum mollis egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam sed ultricies nunc. Curabitur vestibulum viverra rutrum. Etiam imperdiet arcu id urna sagittis porttitor. Curabitur mollis sapien massa, a lobortis risus semper at.
-        </section>
-        <hr>
-
-        <section>
-            <h1>Heading 1</h1>
-            <h2>Heading 2</h2>
-            <h3>Heading 3</h3>
-            <h4>Heading 4</h4>
-        </section>
-        <section class="paper">
-            <h5>But, when?</h5>
-            <label class="checktext"><input type="radio" name="hour"><span>09:00</span></label>
-            <label class="checktext"><input type="radio" name="hour"><span>09:30</span></label>
-            <label class="checktext"><input type="radio" name="hour"><span>10:00</span></label>
-            <label class="checktext"><input type="radio" name="hour"><span>09:30</span></label>
-            <label class="checktext"><input type="radio" name="hour"><span>11:00</span></label>
-            <label class="checktext"><input type="radio" name="hour"><span>09:30</span></label>
-            <label class="checktext"><input type="radio" name="hour"><span>12:00</span></label>
-            <label class="checktext"><input type="radio" name="hour"><span>09:30</span></label>
-            <label class="checktext"><input type="radio" name="hour"><span>13:00</span></label>
-            <label class="checktext"><input type="radio" name="hour"><span>13:30</span></label>
-            <label class="checktext"><input type="radio" name="hour"><span>14:00</span></label>
-            <label class="checktext"><input type="radio" name="hour"><span>14:30</span></label>
-            <label class="checktext"><input type="radio" name="hour"><span>15:00</span></label>
-            <label class="checktext"><input type="radio" name="hour"><span>15:30</span></label>
-            <label class="checktext"><input type="radio" name="hour"><span>16:00</span></label>
-            <label class="checktext"><input type="radio" name="hour"><span>16:30</span></label>
-            <label class="checktext"><input type="radio" name="hour"><span>17:00</span></label>
-            <label class="checktext"><input type="radio" name="hour" checked><span>17:30</span></label>
-            <label class="checktext"><input type="radio" name="hour"><span>18:00</span></label>
-            <label class="checktext"><input type="radio" name="hour"><span>18:30</span></label>
-            <label class="checktext"><input type="radio" name="hour"><span>19:00</span></label>
-            <label class="checktext"><input type="radio" name="hour"><span>19:30</span></label>
-            <label class="checktext"><input type="radio" name="hour"><span>20:00</span></label>
-            <label class="checktext"><input type="radio" name="hour"><span>20:30</span></label>
-            <label class="checktext"><input type="radio" name="hour"><span>21:00</span></label>
-            <label class="checktext"><input type="radio" name="hour"><span>21:30</span></label>
-            <label class="checktext"><input type="radio" name="hour"><span>22:00</span></label>
-            <label class="checktext"><input type="radio" name="hour"><span>22:30</span></label>
-            <label class="checktext"><input type="radio" name="hour"><span>23:00</span></label>
-        </section>
-
-        <script>
-            window.addEventListener('scroll', function() {
-				scroll = window.scrollY;
-				document.getElementsByTagName('header')[0].style.height = 250 - scroll*0.5 + "px";
-			});
-        </script>
+		<section>
+			<h1>Heading 1</h1>
+			<h2>Heading 2</h2>
+			<h3>Heading 3</h3>
+			<h4>Heading 4</h4>
+		</section>
+		<section class="paper">
+			<h5>But, when?</h5>
+			<label class="checktext"><input type="radio" name="hour"><span>09:00</span></label>
+			<label class="checktext"><input type="radio" name="hour"><span>09:30</span></label>
+			<label class="checktext"><input type="radio" name="hour"><span>10:00</span></label>
+			<label class="checktext"><input type="radio" name="hour"><span>09:30</span></label>
+			<label class="checktext"><input type="radio" name="hour"><span>11:00</span></label>
+			<label class="checktext"><input type="radio" name="hour"><span>09:30</span></label>
+			<label class="checktext"><input type="radio" name="hour"><span>12:00</span></label>
+			<label class="checktext"><input type="radio" name="hour"><span>09:30</span></label>
+			<label class="checktext"><input type="radio" name="hour"><span>13:00</span></label>
+			<label class="checktext"><input type="radio" name="hour"><span>13:30</span></label>
+			<label class="checktext"><input type="radio" name="hour"><span>14:00</span></label>
+			<label class="checktext"><input type="radio" name="hour"><span>14:30</span></label>
+			<label class="checktext"><input type="radio" name="hour"><span>15:00</span></label>
+			<label class="checktext"><input type="radio" name="hour"><span>15:30</span></label>
+			<label class="checktext"><input type="radio" name="hour"><span>16:00</span></label>
+			<label class="checktext"><input type="radio" name="hour"><span>16:30</span></label>
+			<label class="checktext"><input type="radio" name="hour"><span>17:00</span></label>
+			<label class="checktext"><input type="radio" name="hour" checked><span>17:30</span></label>
+			<label class="checktext"><input type="radio" name="hour"><span>18:00</span></label>
+			<label class="checktext"><input type="radio" name="hour"><span>18:30</span></label>
+			<label class="checktext"><input type="radio" name="hour"><span>19:00</span></label>
+			<label class="checktext"><input type="radio" name="hour"><span>19:30</span></label>
+			<label class="checktext"><input type="radio" name="hour"><span>20:00</span></label>
+			<label class="checktext"><input type="radio" name="hour"><span>20:30</span></label>
+			<label class="checktext"><input type="radio" name="hour"><span>21:00</span></label>
+			<label class="checktext"><input type="radio" name="hour"><span>21:30</span></label>
+			<label class="checktext"><input type="radio" name="hour"><span>22:00</span></label>
+			<label class="checktext"><input type="radio" name="hour"><span>22:30</span></label>
+			<label class="checktext"><input type="radio" name="hour"><span>23:00</span></label>
+			
+			<div style="text-align:right">
+				<b>Remember Me? </b>
+				<div class="onoffswitch">
+				    <input type="checkbox" id="onoffswitch" name="remember">
+				    <label for="onoffswitch">
+				        <div></div>
+				        <span></span>
+				    </label>
+				</div>
+			</div>
+		</section>
     </body>
 </html>
 
