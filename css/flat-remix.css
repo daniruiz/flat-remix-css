@@ -193,13 +193,14 @@ label.checktext input:checked + span {
 	transition: border-color 0.2s ease-in 0s;
 }
 .onoffswitch input[type=checkbox]{display: none;}
-.onoffswitch label div {
+.onoffswitch label span:first-child {
 	width: 200%;
 	margin-left: -100%;
 	transition: margin 0.2s ease-in 0s;
 	will-change: margin;
+	display: block;
 }
-.onoffswitch label div:before, label div:after {
+.onoffswitch label span:first-child:before, label span:first-child:after {
 	text-shadow: 0 0 1px white;
 	color: white;
 	float: left;
@@ -208,18 +209,18 @@ label.checktext input:checked + span {
 	line-height: 40px;
 	box-sizing: border-box;
 }
-.onoffswitch label div:before {
+.onoffswitch label span:first-child:before {
 	content: "I";
 	padding-left: 20px;
 	background: #1875D1;
 }
-.onoffswitch label div:after {
+.onoffswitch label span:first-child:after {
 	content: "O";
 	padding-right: 20px;
 	background: #A32C36;
 	text-align: right;
 }
-.onoffswitch label span {
+.onoffswitch label span:last-child {
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -232,8 +233,8 @@ label.checktext input:checked + span {
 	margin: 3px;
 	background: white;
 }
-.onoffswitch input[type=checkbox]:checked + label div { margin-left: 0; }
-.onoffswitch input[type=checkbox]:checked + label span { right: 0; }
+.onoffswitch input[type=checkbox]:checked + label span:first-child { margin-left: 0; }
+.onoffswitch input[type=checkbox]:checked + label span:last-child { right: 0; }
 .onoffswitch input[type=checkbox]:checked  + label {
 	border-color: #2F3E9E;
 	background: #2F3E9E;
