@@ -4,7 +4,9 @@
 <hr>
 <br>
 
-### A simple css library with some predefined "Flat" elements that I like to use
+#### A simple css library that provides a set of predefined elements for a rapid web applications development. It Follows a modern design using "flat" colors with high contrasts and sharp borders.  
+
+<br>
 
 ![Screenshot 1](https://github.com/daniruiz/Flat-Remix-CSS-library/blob/master/Images/1.png?raw=true)
 
