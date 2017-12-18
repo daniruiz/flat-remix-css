@@ -18,7 +18,7 @@
 			}
 			header {
 			    position: absolute;
-				height: 500px;
+				height: 250px;
 				width: 100%;
 				left: 50%;
 				transform: translateX(-50%);
@@ -85,7 +85,7 @@
         	window.onload = function() {
         		function headerAnimation() {
 					scroll = window.scrollY;
-					document.getElementsByTagName( 'header' )[0].style.height = 500 - scroll*0.5 + "px";
+					document.getElementsByTagName( 'header' )[0].style.height = 250 - scroll*0.5 + "px";
 				}
         		window.addEventListener( 'scroll', headerAnimation );
         	}
