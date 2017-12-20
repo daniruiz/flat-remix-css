@@ -54,7 +54,7 @@ body {
     font-family: "Roboto", sans-serif;    
     color: #5c616c;
     margin: 0;
-    font-size: 16px;
+    font-size: 13px;
 }
 
 a:link, a:visited, a:active {
@@ -109,13 +109,9 @@ h6 {
     line-height: 24px;
 }
 
-section, article, .section, .article {
-    letter-spacing: 0.2px;
-    font-size: 13px;
-    line-height: 24px;
-}
-
 section, article, .section, .article, .paper {
+    letter-spacing: 0.2px;
+    line-height: 2em;
     word-wrap: break-word;
  	word-break: normal;
     line-height: 2em;
@@ -128,7 +124,7 @@ hr {
     border-radius: 4px;
 }
 
-input:not([type=submit]), textarea {
+input:not([type=submit]):not([type=radio]):not([type=checkbox]), textarea {
     border: 2px solid black;
     background: white;
     color: black;
@@ -141,17 +137,22 @@ input:not([type=submit]), textarea {
     cursor: text;
 }
 input[type=checkbox], input[type=radio] {
+    font-size: 1em;
+    border: .15em solid black;
+    background: white;
+    margin: 7px 0;
     cursor: pointer;
-    height: 20px;
-    width: 20px;
-    box-shadow: inset 0 0 0px 2px white;
+    height: 1.2em;
+    width: 1.2em;
+    box-shadow: inset 0 0 0 2px white;
     vertical-align: text-top;
     margin: 0 5px;
     padding: 0;
 }
+
 input[type=checkbox]:checked, input[type=radio]:checked { background: #1875D1 }
-input[type=checkbox] { border-radius: 2px; }
-input[type=radio] { border-radius: 20px; }
+input[type=checkbox] { border-radius: .15em; }
+input[type=radio] { border-radius: 100%; }
 textarea {
 	padding: 10px;
 	height: 200px
@@ -173,54 +174,24 @@ label.checktext span {
 label.checktext input:checked + span {
     color: black;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 2.5em;
     border-bottom: 5px solid #1875D1;
 }
-.onoffswitch { 
-    display: inline-block;
-    text-align: left;
-}
 .onoffswitch * { cursor: pointer }
-.onoffswitch label {
+.onoffswitch div {
+    text-align: left;
 	position: relative;
     padding: 0;
 	width: 96px;
-	display: block;
+	display: inline-block;
 	overflow: hidden;
 	background: #551419;
 	border: 5px solid #551419;
 	border-radius: 23px;
 	transition: border-color 0.2s ease-in 0s;
 }
-.onoffswitch input[type=checkbox]{display: none;}
-.onoffswitch label span:first-child {
-	width: 200%;
-	margin-left: -100%;
-	transition: margin 0.2s ease-in 0s;
-	will-change: margin;
-	display: block;
-}
-.onoffswitch label span:first-child:before, label span:first-child:after {
-	text-shadow: 0 0 1px white;
-	color: white;
-	float: left;
-	width: 50%;
-	height: 40px;
-	line-height: 40px;
-	box-sizing: border-box;
-}
-.onoffswitch label span:first-child:before {
-	content: "I";
-	padding-left: 20px;
-	background: #1875D1;
-}
-.onoffswitch label span:first-child:after {
-	content: "O";
-	padding-right: 20px;
-	background: #A32C36;
-	text-align: right;
-}
-.onoffswitch label span:last-child {
+.onoffswitch div::after {
+    content: ' ';
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -233,9 +204,37 @@ label.checktext input:checked + span {
 	margin: 3px;
 	background: white;
 }
-.onoffswitch input[type=checkbox]:checked + label span:first-child { margin-left: 0; }
-.onoffswitch input[type=checkbox]:checked + label span:last-child { right: 0; }
-.onoffswitch input[type=checkbox]:checked  + label {
+.onoffswitch input{display: none;}
+.onoffswitch span {
+	width: 200%;
+	margin-left: -100%;
+	transition: margin 0.2s ease-in 0s;
+	will-change: margin;
+	display: block;
+}
+.onoffswitch span:before, span:after {
+	text-shadow: 0 0 1px white;
+	color: white;
+	float: left;
+	width: 50%;
+	height: 40px;
+	line-height: 40px;
+	box-sizing: border-box;
+}
+.onoffswitch span:before {
+	content: "I";
+	padding-left: 20px;
+	background: #1875D1;
+}
+.onoffswitch span:after {
+	content: "O";
+	padding-right: 20px;
+	background: #A32C36;
+	text-align: right;
+}
+.onoffswitch input:checked + div span:first-child { margin-left: 0; }
+.onoffswitch input:checked + div::after { right: 0; }
+.onoffswitch input:checked  + div {
 	border-color: #2F3E9E;
 	background: #2F3E9E;
 }
@@ -254,7 +253,7 @@ label.checktext input:checked + span {
     line-height: 40px;
     display: block;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
-    transition: .2s;
+    transition: border .2s, background .2s, letter-spacing .2s, color .2s;
 }
 .blue-button:hover, .red-button:hover, .green-button:hover {
     letter-spacing: 1px;
@@ -279,6 +278,7 @@ label.checktext input:checked + span {
 }
 
 .rounded-button {
+    border: none;
     cursor: pointer;
     height: 56px;
     width: 56px;
@@ -289,7 +289,8 @@ label.checktext input:checked + span {
     line-height: 53px;
     text-align: center;
     color: white;
-    background: blue;
+    background: #ba174e;
+    display: block;
 }
 
 .paper {

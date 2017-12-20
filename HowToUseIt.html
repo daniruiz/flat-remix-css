@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FLAT REMIX css</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/flat-remix.css">
+        <style>
+			body {
+				padding-bottom: 100px;
+			}
+			@keyframes animate {
+				0%, 40%, 100% {
+				    transform: scale(1);
+				}
+				10% {
+				    transform: scale(1.3);
+				}
+			}
+			#palette {
+				text-align: center;
+			}
+			#palette div {
+				animation: animate 6s infinite ease-in-out;
+				width: 30px;
+				height: 50px;
+				display: inline-block;
+				border-bottom: 7px solid black;
+				will-change: transform;
+				box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+			}
+			section, .paper {
+				max-width: 500px;
+				margin: 40px auto;
+				width: 95%;
+			}
+			textarea { width: 100%;	}
+			.blue-color { color: #3873d7; }
+			.green-color { color: #269687; }
+			.red-color { color: #9f2b32 }
+			.black-color { color: #000 }
+			pre, code {
+				font-size: 12px;
+				line-height: 25px;
+				text-shadow: 0.5px 0.5px 0, -0.5px -0.5px 0;
+				cursor: auto;
+                padding: 10px;
+                border: 3px solid #F5F5F5;
+                background: white;
+                color: #AAA;
+                display: block;
+                margin-top: 50px;
+			}
+            pre, code, pre *, code * {
+                cursor: auto;
+                user-select: text;
+				-webkit-touch-callout: text;
+				-webkit-user-select: text;
+				-khtml-user-select: text;
+				-moz-user-select: text;
+				-ms-user-select: text;
+            }
+            label {
+                padding: 10px;
+                font-size: 16px;
+            }
+            #onoffswitch-label {
+                width: 100%;
+                text-align: center;
+            }
+            .red-button, .blue-button, .green-button, .rounded-button { margin: 20px auto 0; }
+		</style>
+    </head>
+    <body>
+		<section>
+			<h2>Flat Remix Palette</h2>
+			<div id="palette">
+				<div style="
+				        background: #0000ff;animation-delay: 1.3s;"></div><div style="
+				        background: #3873d7;animation-delay: 1.5s;"></div><div style="
+				        background: #269687;animation-delay: 1.7s;"></div><div style="
+				        background: #ba174e;animation-delay: 1.9s;"></div><div style="
+				        background: #9f2b32;animation-delay: 2.1s;"></div><div style="
+				        background: #7c4598;animation-delay: 2.3s;"></div>
+			</div>
+		</section>
+		<hr>
+
+
+		<section>
+			<h2>Paper class</h2>
+			<pre>&lt;div <span class="blue-color">class</span><span class="red-color">=</span><span class="green-color">"paper"</span>&gt;
+&lt;/div&gt;</pre>
+			<div class="paper"></div>
+		</section>
+		<hr>
+		
+		
+		<section>
+			<h2>Shadow</h2>
+			<pre>&lt;div <span class="blue-color">class</span><span class="red-color">=</span><span class="green-color">"with-shadow"</span>&gt;
+&lt;/div&gt;</pre>
+
+			<br>
+
+			<div class="with-shadow" style="padding:5px;"><br></div>
+		</section>
+		<hr>
+		
+		
+		<section>
+			<h2>Headings</h2>
+			
+			<br>
+			
+			<code><span class="red-color">&lt;h1&gt;</span>Heading 1<span class="red-color">&lt;/h1&gt;</span></code>
+			<h1>Heading 1</h1>
+			<code><span class="red-color">&lt;h2&gt;</span>Heading 2<span class="red-color">&lt;/h2&gt;</span></code>
+			<h2>Heading 2</h2>
+			<code><span class="red-color">&lt;h3&gt;</span>Heading 3<span class="red-color">&lt;/h3&gt;</span></code>
+			<h3>Heading 3</h3>
+			<code><span class="red-color">&lt;h4&gt;</span>Heading 4<span class="red-color">&lt;/h4&gt;</span></code>
+			<h4>Heading 4</h4>
+			<code><span class="red-color">&lt;h5&gt;</span>Heading 5<span class="red-color">&lt;/h5&gt;</span></code>
+			<h5>Heading 5</h5>
+			<code><span class="red-color">&lt;h6&gt;</span>Heading 6<span class="red-color">&lt;/h6&gt;</span></code>
+			<h6>Heading 6</h6>
+		</section>
+		<hr>
+		
+		
+		<section>
+			<h2>Selectable text</h2>
+			<pre>&lt;div <span class="blue-color">class</span><span class="red-color">=</span><span class="green-color">"selectable"</span>&gt;
+&lt;/div&gt;</pre>
+
+			<br>
+
+			<span class="selectable">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dictum suscipit faucibus. Nunc eget est eget leo volutpat eleifend. Mauris placerat risus a ligula suscipit, id posuere purus egestas. Maecenas commodo tempus metus, porta lobortis diam tincidunt eget. Cras porttitor mi quis nibh varius iaculis. Aenean elementum malesuada felis id posuere. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam diam justo, placerat id nulla vel, <a href="#">lacinia fermentum</a> libero. Vivamus rutrum mollis egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam sed ultricies nunc. Curabitur vestibulum viverra rutrum. Etiam imperdiet arcu id urna sagittis porttitor. Curabitur mollis sapien massa, a lobortis risus semper at.</span>
+		</section>
+		<hr>
+		
+		
+		<section>
+			<h2>Form elements</h2>
+            <pre class="red-color">&lt;input <span class="blue-color">type</span><span class="red-color">=</span><span class="green-color">"text"</span>&gt;</pre>
+			<input type="text" placeholder="<< Text goes here >>">
+            
+            <pre class="red-color">&lt;textarea&gt;&lt;/textarea&gt;</pre>
+			<textarea placeholder="Write here"></textarea>
+            
+            <pre>
+<span class="red-color">&lt;label&gt;
+    &lt;input <span class="blue-color">type</span><span class="red-color">=</span><span class="green-color">"checkbox"</span></span> name="my-checkbox"<span class="red-color"> checked&gt;</span> Select me
+<span class="red-color">&lt;/label&gt;</span>
+<span class="red-color">&lt;label&gt;
+    &lt;input <span class="blue-color">type</span><span class="red-color">=</span><span class="green-color">"checkbox"</span></span> name="my-checkbox"<span class="red-color">&gt;</span> Select me
+<span class="red-color">&lt;/label&gt;</span></pre>
+			<div style="text-align:center;">
+				<label><input type="checkbox" name="checkbox" checked> Select me</label>
+				<label><input type="checkbox" name="checkbox"> Select me</label>
+			</div>
+            
+            <pre>
+<span class="red-color">&lt;label&gt;
+    &lt;input <span class="blue-color">type</span><span class="red-color">=</span><span class="green-color">"radio"</span></span> name="my-input-radio"<span class="red-color"> checked&gt;</span> Select me
+<span class="red-color">&lt;/label&gt;</span>
+<span class="red-color">&lt;label&gt;
+    &lt;input <span class="blue-color">type</span><span class="red-color">=</span><span class="green-color">"radio"</span></span> name="my-input-radio"<span class="red-color">&gt;</span> Select me
+<span class="red-color">&lt;/label&gt;</span></pre>
+			<div style="text-align:center;">
+				<label><input type="radio" name="radius" checked> Select me</label>
+				<label><input type="radio" name="radius"> Select me</label>
+			</div>
+            
+            <pre>
+<span class="red-color">&lt;label <span class="blue-color">class</span><span class="red-color">=</span><span class="green-color">"checktext"</span>&gt;
+    &lt;input type=<span class="green-color">"radio"</span></span> name="my-checktext" <span class="red-color">checked&gt;</span>
+    <span class="red-color">&lt;span&gt;</span>09:00<span class="red-color">&lt;/span&gt;
+&lt;/label&gt;</span>
+<span class="red-color">&lt;label <span class="blue-color">class</span><span class="red-color">=</span><span class="green-color">"checktext"</span>&gt;
+    &lt;input type=<span class="green-color">"radio"</span></span> name="my-checktext" <span class="red-color">&gt;</span>
+    <span class="red-color">&lt;span&gt;</span>09:00<span class="red-color">&lt;/span&gt;
+&lt;/label&gt;</span></pre>
+			<div style="text-align:center;">
+				<label class="checktext"><input type="radio" name="hour" checked><span>09:00</span></label>
+				<label class="checktext"><input type="radio" name="hour"><span>09:30</span></label>
+			</div>
+            
+            <pre>
+<span class="red-color">&lt;label <span class="blue-color">class</span>=<span class="green-color">"onoffswitch"</span>&gt;
+&lt;input <span class="blue-color">type</span>=<span class="green-color">"checkbox"</span></span> name="my-switch"<span class="red-color">&gt;
+    &lt;div&gt;
+        &lt;span&gt;&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/label&gt;</span></pre>
+            
+            <label id="onoffswitch-label" class="onoffswitch">
+                <input type="checkbox" name="my-switch">
+                <div>
+                    <span></span>
+                </div>
+            </label>
+            
+            <code>&lt;button <span class="blue-color">class</span><span class="red-color">=</span><span class="green-color">"blue-button"</span>&gt;save&lt;/button&gt;</code>
+            <button class="blue-button">save</button>
+            <code>&lt;button <span class="blue-color">class</span><span class="red-color">=</span><span class="green-color">"green-button"</span>&gt;save&lt;/button&gt;</code>
+            <button class="green-button">enter</button>
+            <code>&lt;button <span class="blue-color">class</span><span class="red-color">=</span><span class="green-color">"red-button"</span>&gt;save&lt;/button&gt;</code>
+            <button class="red-button">exit</button>
+            <code>&lt;button <span class="blue-color">class</span><span class="red-color">=</span><span class="green-color">"rounded-button"</span>&gt;save&lt;/button&gt;</code>
+            <button class="rounded-button">+</button>
+		</section>
+    </body>
+</html>
+

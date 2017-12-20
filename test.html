@@ -63,8 +63,8 @@
 			textarea {
 				width: 100%;
 				max-width: 100%;
+                min-width: 100%;
 			}
-			input[type="text"], textarea { margin: 7px; }
 			label { width: 225px; }
 
 			.blue-button, .red-button, .green-button {
@@ -80,6 +80,9 @@
 				margin: 20px;
 				vertical-align: middle;
 			}
+            #onoffswitch-label {
+                width: auto;
+            }
 		</style>
         <script>
         	window.onload = function() {
@@ -201,10 +204,12 @@
 			
 			<div style="text-align:right">
 				<strong>Remember Me? </strong>
-				<div class="onoffswitch">
-				    <input type="checkbox" id="onoffswitch" name="remember">
-				    <label for="onoffswitch"><span></span><span></span></label>
-				</div>
+				<label id="onoffswitch-label" class="onoffswitch">
+                <input type="checkbox" name="my-switch">
+                    <div>
+                        <span></span>
+                    </div>
+                </label>
 			</div>
 		</section>
     </body>
