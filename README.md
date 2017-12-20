@@ -4,6 +4,9 @@
 <hr>
 <br>
 
+# How to use it  
+https://htmlpreview.github.io/?https://github.com/daniruiz/Flat-Remix-CSS-library/blob/master/HowToUseIt.html
+
 #### A simple css library that provides a set of predefined elements for a rapid web applications development. It Follows a modern design using "flat" colors with high contrasts and sharp borders.  
 
 <br>
