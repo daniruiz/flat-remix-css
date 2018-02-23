@@ -183,66 +183,91 @@ label.checktext input:checked + span {
     font-size: 2.5em;
     border-bottom: 5px solid #1875D1;
 }
-.onoffswitch * { cursor: pointer }
+
+
+.onoffswitch {
+    height: 45px;
+    margin-top: 5px;
+}
+
+.onoffswitch * {
+    cursor: pointer
+}
+
 .onoffswitch > span {
     text-align: left;
-	position: relative;
+    position: relative;
     padding: 0;
-	width: 96px;
-	display: inline-block;
-	overflow: hidden;
-	background: #551419;
-	border: 5px solid #551419;
-	border-radius: 23px;
-	transition: border-color 0.2s ease-in;
+    width: 96px;
+    display: inline-block;
+    overflow: hidden;
+    background: #551419;
+    border: 3px solid #551419;
+    border-radius: 23px;
+    transition: border-color 0.2s ease-in 0s;
 }
+
 .onoffswitch > span::after {
     content: ' ';
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	right: 45px;
-	transition: right 0.2s ease-in;
-	will-change: right;
-	height: 34px;
-	width: 34px;
-	border-radius: 17px;
-	margin: 3px;
-	background: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 50px;
+    transition: right 0.2s ease-in 0s;
+    will-change: right;
+    height: 34px;
+    width: 34px;
+    border-radius: 17px;
+    margin: 3px;
+    background: white;
 }
-.onoffswitch input{display: none;}
+
+.onoffswitch input {
+    display: none;
+}
+
 .onoffswitch span span {
-	width: 200%;
-	margin-left: -100%;
-	transition: margin 0.2s ease-in;
-	will-change: margin;
-	display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.2s ease-in 0s;
+    will-change: margin;
+    display: block;
 }
+
 .onoffswitch span span:before, span span:after {
-	text-shadow: 0 0 1px white;
-	color: white;
-	float: left;
-	width: 50%;
-	height: 40px;
-	line-height: 40px;
-	box-sizing: border-box;
+    color: white;
+    float: left;
+    width: 50%;
+    height: 40px;
+    font-size: 22px;
+    line-height: 42px;
+    box-sizing: border-box;
 }
+
 .onoffswitch span span:before {
-	content: "I";
-	padding-left: 20px;
-	background: #1875D1;
+    content: "✔";
+    padding-left: 20px;
+    background: #1875D1;
 }
+
 .onoffswitch span span:after {
-	content: "O";
-	padding-right: 20px;
-	background: #A32C36;
-	text-align: right;
+    content: "✕";
+    padding-right: 20px;
+    background: #A32C36;
+    text-align: right;
 }
-.onoffswitch input:checked + span span:first-child { margin-left: 0; }
-.onoffswitch input:checked + span::after { right: 0; }
-.onoffswitch input:checked  + span {
-	border-color: #2F3E9E;
-	background: #2F3E9E;
+
+.onoffswitch input:checked + span span:first-child {
+    margin-left: 0;
+}
+
+.onoffswitch input:checked + span::after {
+    right: 0;
+}
+
+.onoffswitch input:checked + span {
+    border-color: #2F3E9E;
+    background: #2F3E9E;
 }
 
 .blue-button, .red-button, .green-button {
