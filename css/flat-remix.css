@@ -246,7 +246,7 @@ label.checktext input:checked + span {
 }
 
 .onoffswitch span span:before {
-    content: "sí";
+    content: "yes";
     padding-left: 20px;
     background: #1875D1;
 }
