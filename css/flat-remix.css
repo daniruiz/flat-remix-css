@@ -47,6 +47,7 @@ input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
     -moz-user-select: none;
     -ms-user-select: none;
     cursor: default;
+    letter-spacing: 0;
 }
 
 body {
@@ -110,10 +111,9 @@ h6 {
 }
 
 section, article, .section, .article, .paper {
-    letter-spacing: 0.2px;
     line-height: 2em;
     word-wrap: break-word;
- 	word-break: normal;
+    word-break: normal;
     line-height: 2em;
 }
 
@@ -188,6 +188,7 @@ label.checktext input:checked + span {
 .onoffswitch {
     height: 45px;
     margin-top: 7px;
+    font-weight: bold;
 }
 
 .onoffswitch * {
@@ -246,13 +247,13 @@ label.checktext input:checked + span {
 }
 
 .onoffswitch span span:before {
-    content: "yes";
+    content: "I";
     padding-left: 20px;
     background: #1875D1;
 }
 
 .onoffswitch span span:after {
-    content: "no";
+    content: "O";
     padding-right: 20px;
     background: #A32C36;
     text-align: right;
@@ -288,7 +289,7 @@ label.checktext input:checked + span {
     transition: border .2s, background .2s, letter-spacing .2s, color .2s;
 }
 .blue-button:hover, .red-button:hover, .green-button:hover {
-    letter-spacing: 1px;
+    letter-spacing: .055em;
 }
 .blue-button:active, .red-button:active, .green-button:active, .blue-button.active, .red-button.active, .green-button.active {
     box-shadow: none;
@@ -333,7 +334,6 @@ label.checktext input:checked + span {
     margin-top: 20px;
     min-height: 100px;
     color: black;
-    letter-spacing: 0px;
 }
 
 .with-shadow {
