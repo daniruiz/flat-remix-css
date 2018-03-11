@@ -173,9 +173,12 @@ label.checktext input:checked + span {
 
 
 .onoffswitch {
+    font-weight: bold;    
+    overflow: hidden;
     height: 45px;
+    padding: 0;
     margin-top: 7px;
-    font-weight: bold;
+    display: inline-block;
 }
 
 .onoffswitch * {
