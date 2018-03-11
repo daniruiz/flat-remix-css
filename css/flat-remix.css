@@ -1,35 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,400');
 
 
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-    opacity: 1;
-    -webkit-transition: opacity .2s;
-    color: inherit;
-}
-input:-moz-placeholder, textarea:-moz-placeholder {
+input::placeholder, textarea::placeholder {
     opacity: 1;
     transition: opacity .2s;
     color: inherit;
 }
-input::-moz-placeholder, textarea::-moz-placeholder {
-    opacity: 1;
-    transition: opacity .2s;
-    color: inherit;
+
+input:focus::placeholder, textarea:focus::placeholder {
+    opacity: .2;
 }
+
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     opacity: 1;
     transition: opacity .2s;
     color: inherit;
 }
-input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
-    opacity: .2;
-}
-input:focus:-moz-placeholder, textarea:focus:-moz-placeholder {
-    opacity: .2;
-}
-input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
-    opacity: .2;
-}
+
 input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
     opacity: .2;
 }
@@ -206,17 +193,16 @@ label.checktext input:checked + span {
     background: #551419;
     border: 3px solid #551419;
     border-radius: 23px;
-    transition: border-color 0.2s ease-in 0s;
+    transition: border-color 0.2s;
 }
 
 .onoffswitch > span::after {
     content: ' ';
     position: absolute;
-    top: 0;
     bottom: 0;
-    right: 50px;
-    transition: right 0.2s ease-in 0s;
-    will-change: right;
+    left: 0;
+    transform: translateX(0);
+    transition: transform 0.2s;
     height: 34px;
     width: 34px;
     border-radius: 17px;
@@ -230,9 +216,8 @@ label.checktext input:checked + span {
 
 .onoffswitch span span {
     width: 200%;
-    margin-left: -100%;
-    transition: margin 0.2s ease-in 0s;
-    will-change: margin;
+    transform: translateX(-50%);
+    transition: transform 0.2s;
     display: block;
 }
 
@@ -247,24 +232,24 @@ label.checktext input:checked + span {
 }
 
 .onoffswitch span span:before {
-    content: "I";
+    content: "sí";
     padding-left: 20px;
     background: #1875D1;
 }
 
 .onoffswitch span span:after {
-    content: "O";
+    content: "no";
     padding-right: 20px;
     background: #A32C36;
     text-align: right;
 }
 
-.onoffswitch input:checked + span span:first-child {
-    margin-left: 0;
+.onoffswitch input:checked + span span {
+    transform: translateX(0);
 }
 
 .onoffswitch input:checked + span::after {
-    right: 0;
+    transform: translateX(50px);
 }
 
 .onoffswitch input:checked + span {
