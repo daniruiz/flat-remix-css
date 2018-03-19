@@ -3,7 +3,7 @@
 ###### Flat-Remix is licensed under the MIT License
 <hr>
 
-#### A simple css library that provides a set of predefined elements for a rapid web applications development. It Follows a modern design using "flat" colors with high contrasts and sharp borders.  
+#### A tiny CSS library that provides a set of predesigned elements for a fast web development. It follows a modern "flat" design using high contrasts and sharp borders.
 
 <br>
 
