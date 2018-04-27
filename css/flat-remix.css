@@ -268,11 +268,7 @@ label.checktext input:checked + span {
 }
 
 .onoffswitch span span:before {
-<<<<<<< HEAD
     content: attr(data-on);
-=======
-    content: "yes";
->>>>>>> d826e8599a387e3ac9444bd7a7d2605eb545136e
     padding-left: 20px;
     background: #1875D1;
 }
@@ -310,14 +306,8 @@ label.checktext input:checked + span {
     border: 3px solid;
     line-height: 40px;
     display: block;
-<<<<<<< HEAD
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
-    transition: border .2s, background .2s, transform .2s, color .2s;
-    font-family: 
-=======
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
-    transition: border .2s, background .2s, letter-spacing .2s, color .2s;
->>>>>>> d826e8599a387e3ac9444bd7a7d2605eb545136e
+    transition: border .2s, background .2s, transform .2s, color .2s;
 }
 
 .blue-button:hover, .red-button:hover, .green-button:hover {
