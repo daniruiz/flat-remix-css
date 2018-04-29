@@ -5,39 +5,22 @@
 
 ### A lightweight CSS library that provides a set of predesigned elements for a fast web development. It follows a modern "flat" design using high contrasts and sharp borders.
 
-<br>
 
-![Screenshot 1](https://github.com/daniruiz/Flat-Remix-CSS-library/blob/master/Images/1.png?raw=true)
-
-
-[↧ Download Flat-Remix.css](https://raw.githubusercontent.com/daniruiz/Flat-Remix-CSS-library/master/css/flat-remix.css)  
-
-[drasite.com/flat-remix-css](https://drasite.com/flat-remix-css)
-
-* * * * *
-
-###### Flat-Remix CSS Library is licensed under the MIT License
-
-* * * * *
-
-
-How to use Flat Remix CSS Library
-=================================
 
 Flat Remix Palette
 ------------------
 
-\#0000ff
+- ![#0000ff](https://placehold.it/15/0000ff/000000?text=+) `#0000ff`
 
-\#3873d7
+- ![#3873d7](https://placehold.it/15/3873d7/000000?text=+) `#3873d7`
 
-\#269687
+- ![#269687](https://placehold.it/15/269687/000000?text=+) `#269687`
 
-\#ba174e
+- ![#ba174e](https://placehold.it/15/ba174e/000000?text=+) `#ba174e`
 
-\#9f2b32
+- ![#9f2b32](https://placehold.it/15/9f2b32/000000?text=+) `#9f2b32`
 
-\#7c4598
+- ![#7c4598](https://placehold.it/15/7c4598/000000?text=+) `#7c4598`
 
 * * * * *
 
@@ -132,18 +115,18 @@ Horizontal rule
 Form elements
 -------------
 
-### Input
+##### Input
 
 ``` html
   <input type="text">
 ```
 
-### Textarea
+##### Textarea
 ``` html
   <textarea></textarea>
 ```
 
-### Checkbox
+##### Checkbox
 ``` html
     <label>
         <input type="checkbox" name="my-checkbox" checked> Select me
@@ -153,7 +136,7 @@ Form elements
     </label>
 ``` 
 
-### Input Radio
+##### Input Radio
 ``` html
     <label>
         <input type="radio" name="my-input-radio" checked> Select me
@@ -163,7 +146,7 @@ Form elements
     </label>
 ```
 
-### Checktext
+##### Checktext
 ``` html
     <label class="checktext">
         <input type="radio" name="my-checktext" checked>
@@ -175,7 +158,7 @@ Form elements
     </label>
 ```
 
-### On/Off Switch
+##### On/Off Switch
 ``` html
     <label class="onoffswitch">
     <input type="checkbox" name="my-switch">
@@ -183,7 +166,7 @@ Form elements
     </label>
 ```
 
-### Buttons
+##### Buttons
 ``` html
   <button class="blue-button">save</button>
 ```
@@ -199,3 +182,6 @@ Form elements
 ``` html
   <button class="rounded-button">+</button>
 ```
+
+
+![Screenshot 1](https://github.com/daniruiz/Flat-Remix-CSS-library/blob/master/Images/1.png?raw=true)
