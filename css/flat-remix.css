@@ -44,7 +44,7 @@ body {
     font-size: 13px;
 }
 
-a:link, a:visited, a:active {
+a:link, a:visited, a:active, a {
     color: #1875D1;
     font-weight: bold;
     text-decoration: none;
@@ -55,7 +55,7 @@ a * {
     cursor: pointer !important;
 }
 
-a:hover {
+a:link:hover, a:visited:hover, a:active:hover, a:hover {
     text-decoration: underline
 }
 
@@ -294,15 +294,15 @@ label.checktext input:checked + span {
 }
 
 .blue-button, .red-button, .green-button {
-    border-radius: 5px;
+    border-radius: 4px;
     font-weight: bold;
     color: white;
-    margin-top: 5px;
+    margin-top: 7px;
     text-align: center;
     cursor: pointer;
     font-size: 16px;
     height: 45px;
-    width: 130px;
+    width: 120px;
     border: 3px solid;
     line-height: 40px;
     display: block;
