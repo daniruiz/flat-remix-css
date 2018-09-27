@@ -20,6 +20,13 @@ input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
     opacity: .2;
 }
 
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
 * {
     box-sizing: border-box;
     -webkit-appearance: none;
@@ -33,8 +40,8 @@ input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
     -moz-user-select: none;
     -ms-user-select: none;
     cursor: default;
-    letter-spacing: 0;
     font-family: "Roboto", sans-serif;
+    letter-spacing: 0;
 }
 
 body {
@@ -168,6 +175,16 @@ input[type=radio] {
     border-radius: 100%;
 }
 
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 textarea {
     padding: 10px;
     height: 200px
@@ -187,7 +204,7 @@ label.checktext span {
     cursor: pointer;
     color: #5c616c;
     border-bottom: .125em solid #5c616c;
-    margin: .625em;
+    margin: .7em .625em;
     line-height: 1em;
     transition: transform .2s;
 }
@@ -225,12 +242,12 @@ select {
     padding: 0;
     margin-top: 7px;
     display: inline-block;
-    filter: drop-shadow(0 2px 1px rgba(0,0,0,.25));
     transition: transform .2s;
 }
 
 .onoffswitch:hover {
     transform: scale(1.03);
+    filter: drop-shadow(0 2px 1px rgba(0,0,0,.25));
 }
 
 .onoffswitch * {
@@ -276,7 +293,7 @@ select {
     display: block;
 }
 
-.onoffswitch span span:before, span span:after {
+.onoffswitch span span::before, .onoffswitch span span::after {
     color: white;
     float: left;
     width: 50%;
@@ -286,13 +303,13 @@ select {
     box-sizing: border-box;
 }
 
-.onoffswitch span span:before {
+.onoffswitch span span::before {
     content: attr(data-on);
     padding-left: 20px;
     background: #1875D1;
 }
 
-.onoffswitch span span:after {
+.onoffswitch span span::after {
     content: attr(data-off);
     padding-right: 20px;
     background: #A32C36;
@@ -325,12 +342,13 @@ select {
     border: 3px solid;
     line-height: 40px;
     display: block;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
-    transition: border .2s .2s, background .2s .2s, transform .2s, color .2s .2s;
+    transition: border .2s .2s, background .2s .2s, transform .2s, color .2s .2s, box-shadow .2s;
+    text-transform: capitalize;
 }
 
 .blue-button:hover, .red-button:hover, .green-button:hover {
     transform: scale(1.03);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
 }
 
 .blue-button:active, .red-button:active, .green-button:active, .blue-button.active, .red-button.active, .green-button.active {
@@ -338,7 +356,7 @@ select {
     border-color: black;
     color: black;
     background: white;
-    transition: transform .2s;
+    transition: transform .2s, box-shadow .2s;
 }
 
 .blue-button {
@@ -361,7 +379,7 @@ select {
     cursor: pointer;
     height: 56px;
     width: 56px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, .5);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
     border-radius: 100%;
     z-index: 10;
     font-size: 30px;
