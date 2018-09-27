@@ -156,6 +156,10 @@ input[type=checkbox]:checked, input[type=radio]:checked {
     background: #1875D1
 }
 
+label:hover > input[type=checkbox]:not(:checked), label:hover > input[type=radio]:not(:checked) {
+    background: rgb(0, 0, 0);
+}
+
 input[type=checkbox] {
     border-radius: .125em;
 }
@@ -197,7 +201,7 @@ label.checktext input:checked + span {
     font-size: 2.5em;
     margin: -.25em .255em 0;
     transform: translateY(.12em);
-    border-bottom: .12em solid #1875D1;
+    border-color: #1875D1;
 }
 
 select {
@@ -322,7 +326,7 @@ select {
     line-height: 40px;
     display: block;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
-    transition: border .2s, background .2s, transform .2s, color .2s;
+    transition: border .2s .2s, background .2s .2s, transform .2s, color .2s .2s;
 }
 
 .blue-button:hover, .red-button:hover, .green-button:hover {
@@ -334,6 +338,7 @@ select {
     border-color: black;
     color: black;
     background: white;
+    transition: transform .2s;
 }
 
 .blue-button {
