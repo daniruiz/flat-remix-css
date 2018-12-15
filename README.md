@@ -10,17 +10,17 @@
 Flat Remix Palette
 ------------------
 
-- ![#0000ff](https://placehold.it/15/0000ff/000000?text=+) `#0000ff`
+- ![#265ab1](https://placehold.it/15/265ab1/000000?text=+) `#265ab1`
 
-- ![#3873d7](https://placehold.it/15/3873d7/000000?text=+) `#3873d7`
+- ![#367bf0](https://placehold.it/15/367bf0/000000?text=+) `#367bf0`
 
-- ![#269687](https://placehold.it/15/269687/000000?text=+) `#269687`
+- ![#19a187](https://placehold.it/15/19a187/000000?text=+) `#19a187`
 
-- ![#ba174e](https://placehold.it/15/ba174e/000000?text=+) `#ba174e`
+- ![#d41919](https://placehold.it/15/d41919/000000?text=+) `#d41919`
 
-- ![#9f2b32](https://placehold.it/15/9f2b32/000000?text=+) `#9f2b32`
+- ![#b8174c](https://placehold.it/15/b8174c/000000?text=+) `#b8174c`
 
-- ![#7c4598](https://placehold.it/15/7c4598/000000?text=+) `#7c4598`
+- ![#8c42ab](https://placehold.it/15/8c42ab/000000?text=+) `#8c42ab`
 
 * * * * *
 
@@ -121,6 +121,15 @@ Form elements
   <input type="text">
 ```
 
+##### Select
+
+``` html
+<select>
+    <option>Level 1</option>
+    <option>Level 2</option>
+</select>
+```
+
 ##### Textarea
 ``` html
   <textarea></textarea>
@@ -182,6 +191,7 @@ Form elements
 ``` html
   <button class="rounded-button">+</button>
 ```
-
-
-![Screenshot 1](https://github.com/daniruiz/Flat-Remix-CSS-library/blob/master/Images/1.png?raw=true)
+<br>
+<hr>
+<br>
+<img src="https://github.com/daniruiz/Flat-Remix-CSS-library/blob/master/Images/1.png?raw=true" width=900>
