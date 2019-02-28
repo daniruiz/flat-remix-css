@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,400');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400,700');
 
 input::placeholder, textarea::placeholder {
     opacity: 1;
