@@ -126,7 +126,8 @@ hr {
     border-radius: 4px;
 }
 
-input:not([type=submit]):not([type=radio]):not([type=checkbox]), textarea, select {
+input:not([type=submit]):not([type=reset]):not([type=radio]):not([type=checkbox]),
+textarea, select {
     border: 2px solid #000;
     background: #FFF;
     color: #000;
@@ -330,7 +331,12 @@ select {
     border-color: #2656a8;
 }
 
-button, input[type=submit], .blue-button, .red-button, .green-button {
+button,
+input[type=submit],
+input[type=reset],
+.blue-button, input.blue-button,
+.red-button, input.red-button,
+.green-button, input.green-button {
     border-radius: 4px;
     font-weight: bold;
     color: #FFF;
@@ -368,12 +374,23 @@ button, input[type=submit], .blue-button, .red-button, .green-button {
 
 .rounded-button:hover { transform: scale(1.04); }
 
-button:hover, input[type=submit]:hover, .blue-button:hover, .red-button:hover {
+button:hover,
+input[type=submit]:hover,
+input[type=reset]:hover,
+.blue-button:hover, input.blue-button:hover,
+.red-button:hover, input.red-button:hover,
+.green-button:hover, input.green-button:hover {
     transform: scale(1.03);
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
 }
 
-button:active, input[type=submit]:active, button.active, input[type=submit].active, .blue-button:active, .red-button:active, .green-button:active, .blue-button.active, .red-button.active, .green-button.active, .rounded-button:active, .rounded-button.active {
+button:active, button.active,
+input[type=submit]:active, input[type=submit].active,
+input[type=reset]:active, input[type=reset].active,
+.blue-button:active, input.blue-button:active, .blue-button.active, input.blue-button.active,
+.red-button:active, input.red-button:active, .red-button.active, input.red-button.active,
+.green-button:active, input.green-button:active, .green-button.active, input.green-button.active,
+.rounded-button:active, .rounded-button.active {
     box-shadow: none;
     border-color: #000;
     color: #000;
@@ -384,17 +401,17 @@ button:active, input[type=submit]:active, button.active, input[type=submit].acti
 
 .rounded-button:active, .rounded-button.active { box-shadow: 0 0 10px rgba(0, 0, 0, .6); }
 
-.blue-button {
+.blue-button, input.blue-button {
     background: #367bf0;
     border-color: #2656a8;
 }
 
-.red-button {
+.red-button, input.red-button {
     background: #b8174c;
     border-color: #811035;
 }
 
-.green-button {
+.green-button, input.green-button {
     background: #19a187;
     border-color: #12715f;
 }
