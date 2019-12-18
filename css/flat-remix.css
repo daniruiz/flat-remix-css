@@ -126,6 +126,33 @@ hr {
     border-radius: 4px;
 }
 
+code, pre {
+    padding: 5px 10px;
+    border-radius: 4px;
+    overflow: auto;
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, .05);
+}
+
+code { background: #E6E6E6; }
+
+pre {
+    background: white;
+    margin: 40px 0;
+}
+
+code, code *, pre, pre * {
+    font-size: 12px;
+    font-family: monospace;
+    line-height: 2em;
+    cursor: auto;
+    user-select: text;
+    -webkit-touch-callout: text;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+}
+
 input:not([type=submit]):not([type=reset]):not([type=radio]):not([type=checkbox]),
 textarea, select {
     border: 2px solid #000;
