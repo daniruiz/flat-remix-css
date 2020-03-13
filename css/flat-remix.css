@@ -475,6 +475,10 @@ input[type=reset]:active, input[type=reset].active,
     -ms-user-select: text;
 }
 
+::-moz-focus-inner {
+    border: 0;
+}
+
 ::-moz-selection {
     color: #FFFFFF;
     background: #000;
