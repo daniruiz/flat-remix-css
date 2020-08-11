@@ -27,19 +27,28 @@ input[type="search"]::-webkit-search-results-decoration {
     display: none;
 }
 
+
+::-moz-focus-inner {
+    border: 0;
+}
+
+::-moz-selection {
+    color: #FFFFFF;
+    background: #000;
+}
+
+::selection {
+    color: #FFFFFF;
+    background: #000;
+}
+
 * {
     box-sizing: border-box;
+    outline: none;
     -webkit-appearance: none;
     -webkit-tap-highlight-color: transparent !important;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
-    outline: none;
-    user-select: none;
     -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    cursor: default;
     font-family: "Roboto", sans-serif;
     letter-spacing: 0;
 }
@@ -49,6 +58,12 @@ body {
     color: #5c616c;
     margin: 0;
     font-size: 13px;
+    cursor: default;
+    user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 a:link, a:visited, a:active, a {
@@ -56,10 +71,6 @@ a:link, a:visited, a:active, a {
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
-}
-
-a * {
-    cursor: pointer !important;
 }
 
 a:link:hover, a:visited:hover, a:active:hover, a:hover {
@@ -138,7 +149,7 @@ pre {
     margin: 40px 0;
 }
 
-code, code *, pre, pre * {
+code, pre {
     font-size: 12px;
     font-family: monospace;
     line-height: 2em;
@@ -275,15 +286,12 @@ select {
     margin-top: 7px;
     display: inline-block;
     transition: transform .2s;
+    cursor: pointer;
 }
 
 .onoffswitch:hover {
     transform: scale(1.03);
     filter: drop-shadow(0 2px 1px rgba(0, 0, 0, .25));
-}
-
-.onoffswitch * {
-    cursor: pointer
 }
 
 .onoffswitch > span {
@@ -463,7 +471,7 @@ input[type=reset]:active, input[type=reset].active,
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
 }
 
-.selectable, .selectable * {
+.selectable {
     cursor: auto;
     user-select: text;
     -webkit-touch-callout: text;
@@ -471,18 +479,4 @@ input[type=reset]:active, input[type=reset].active,
     -khtml-user-select: text;
     -moz-user-select: text;
     -ms-user-select: text;
-}
-
-::-moz-focus-inner {
-    border: 0;
-}
-
-::-moz-selection {
-    color: #FFFFFF;
-    background: #000;
-}
-
-::selection {
-    color: #FFFFFF;
-    background: #000;
 }
