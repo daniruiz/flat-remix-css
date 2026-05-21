@@ -45,6 +45,7 @@ input[type="search"]::-webkit-search-results-decoration {
 * {
     box-sizing: border-box;
     outline: none;
+    appearance: none;
     -webkit-appearance: none;
     -webkit-tap-highlight-color: transparent !important;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
@@ -225,11 +226,13 @@ input[type=radio] {
 }
 
 input[type=number] {
+    appearance: textfield;
     -moz-appearance: textfield;
 }
 
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
+    appearance: none;
     -webkit-appearance: none;
     margin: 0;
 }
