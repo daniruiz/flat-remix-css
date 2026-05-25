@@ -1,5 +1,56 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,400,700');
 
+:root {
+    color-scheme: light dark;
+
+    --fr-bg: light-dark(#FAFAFA, #2d303b);
+    --fr-text: light-dark(#5c616c, #cdd6e0);
+    --fr-surface: light-dark(#FFFFFF, #383c4a);
+    --fr-surface-text: light-dark(#000000, #e6eaf0);
+    --fr-code-bg: light-dark(#E6E6E6, #41485a);
+    --fr-border: light-dark(#000000, #828c9f);
+    --fr-muted-border: light-dark(rgba(0, 0, 0, .14), rgba(255, 255, 255, .14));
+    --fr-rule: light-dark(#5c616c, #5c6370);
+
+    --fr-link: light-dark(#367bf0, #5e9bff);
+    --fr-accent: light-dark(#367bf0, #4a86f7);
+    --fr-accent-border: #2656a8;
+    --fr-danger: light-dark(#b8174c, #d6315f);
+    --fr-danger-border: light-dark(#811035, #9e1442);
+    --fr-success: light-dark(#19a187, #1cae92);
+    --fr-success-border: #12715f;
+    --fr-purple: light-dark(#8c42ab, #9d54bd);
+    --fr-blockquote-accent: #49AEE6;
+
+    --fr-selection-bg: light-dark(#000000, #2f6fd0);
+    --fr-selection-text: #FFFFFF;
+
+    --fr-btn-bg: light-dark(#737680, #404552);
+    --fr-btn-border: light-dark(#272a34, #20232b);
+    --fr-btn-text: light-dark(#FFFFFF, #e6eaf0);
+    --fr-btn-active-bg: light-dark(#FFFFFF, #d3dae3);
+    --fr-btn-active-text: light-dark(#000000, #20232b);
+    --fr-btn-active-border: light-dark(#000000, #d3dae3);
+
+    --fr-knob: light-dark(#FFFFFF, #f0f3f7);
+    --fr-on-accent: #FFFFFF;
+
+    --fr-arrow-light: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOSIgaGVpZ2h0PSIxOSIgeD0iMCIgeT0iMCIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMTkgMTkiIHhtbDpzcGFjZT0icHJlc2VydmUiPgogPGcgdHJhbnNmb3JtPSJtYXRyaXgoMC4wMzM5MjgzNiwwLDAsMC4wMzM5MjgzNiwtNi43ODU2NTUyLDEuNjk2NzE2M2UtNSkiPgogIDxwYXRoIGQ9Ik0gNDgwLDM0NC4xODEgMjY4Ljg2OSwxMzEuODg5IGMgLTE1Ljc1NiwtMTUuODU5IC00MS4zLC0xNS44NTkgLTU3LjA1NCwwIC0xNS43NTQsMTUuODU3IC0xNS43NTQsNDEuNTcgMCw1Ny40MzEgbCAyMzcuNjMyLDIzOC45MzcgYyA4LjM5NSw4LjQ1MSAxOS41NjIsMTIuMjU0IDMwLjU1MywxMS42OTggMTAuOTkzLDAuNTU2IDIyLjE1OSwtMy4yNDcgMzAuNTU1LC0xMS42OTggTCA3NDguMTg2LDE4OS4zMiBjIDE1Ljc1NiwtMTUuODYgMTUuNzU2LC00MS41NzEgMCwtNTcuNDMxIC0xNS43NTYsLTE1Ljg2IC00MS4yOTksLTE1Ljg1OSAtNTcuMDUxLDAgeiIvPgogPC9nPgo8L3N2Zz4K);
+    --fr-arrow-dark: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOSIgaGVpZ2h0PSIxOSIgeD0iMCIgeT0iMCIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMTkgMTkiIHhtbDpzcGFjZT0icHJlc2VydmUiPgogPGcgdHJhbnNmb3JtPSJtYXRyaXgoMC4wMzM5MjgzNiwwLDAsMC4wMzM5MjgzNiwtNi43ODU2NTUyLDEuNjk2NzE2M2UtNSkiIGZpbGw9IiNiOGJjYzgiPgogIDxwYXRoIGQ9Ik0gNDgwLDM0NC4xODEgMjY4Ljg2OSwxMzEuODg5IGMgLTE1Ljc1NiwtMTUuODU5IC00MS4zLC0xNS44NTkgLTU3LjA1NCwwIC0xNS43NTQsMTUuODU3IC0xNS43NTQsNDEuNTcgMCw1Ny40MzEgbCAyMzcuNjMyLDIzOC45MzcgYyA4LjM5NSw4LjQ1MSAxOS41NjIsMTIuMjU0IDMwLjU1MywxMS42OTggMTAuOTkzLDAuNTU2IDIyLjE1OSwtMy4yNDcgMzAuNTU1LC0xMS42OTggTCA3NDguMTg2LDE4OS4zMiBjIDE1Ljc1NiwtMTUuODYgMTUuNzU2LC00MS41NzEgMCwtNTcuNDMxIC0xNS43NTYsLTE1Ljg2IC00MS4yOTksLTE1Ljg1OSAtNTcuMDUxLDAgeiIvPgogPC9nPgo8L3N2Zz4K);
+    --fr-select-arrow: var(--fr-arrow-light);
+}
+
+/* The chevron is an image. light-dark()'s image form isn't broadly supported
+   yet (Firefox-only as of 2026), so for now the image is swapped by hand: light
+   default, dark on OS dark mode, and set explicitly in each forced rule below.
+   Once support is broad this collapses to light-dark(url(), url()) + no @media. */
+@media (prefers-color-scheme: dark) {
+    :root { --fr-select-arrow: var(--fr-arrow-dark); }
+}
+
+:root[data-theme="light"] { color-scheme: light; --fr-select-arrow: var(--fr-arrow-light); }
+:root[data-theme="dark"]  { color-scheme: dark;  --fr-select-arrow: var(--fr-arrow-dark); }
+
 input::placeholder, textarea::placeholder {
     opacity: 1;
     transition: opacity .2s;
@@ -33,13 +84,13 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 ::-moz-selection {
-    color: #FFFFFF;
-    background: #000;
+    color: var(--fr-selection-text);
+    background: var(--fr-selection-bg);
 }
 
 ::selection {
-    color: #FFFFFF;
-    background: #000;
+    color: var(--fr-selection-text);
+    background: var(--fr-selection-bg);
 }
 
 * {
@@ -55,8 +106,8 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 body {
-    background-color: #FAFAFA;
-    color: #5c616c;
+    background-color: var(--fr-bg);
+    color: var(--fr-text);
     margin: 0;
     font-size: 13px;
     cursor: default;
@@ -68,7 +119,7 @@ body {
 }
 
 a:link, a:visited, a:active, a {
-    color: #367bf0;
+    color: var(--fr-link);
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
@@ -131,8 +182,8 @@ section, article, .section, .article, .paper {
 
 hr {
     width: 50%;
-    border: 3px solid #5c616c;
-    background-color: #5c616c;
+    border: 3px solid var(--fr-rule);
+    background-color: var(--fr-rule);
     border-radius: 4px;
 }
 
@@ -143,10 +194,10 @@ code, pre {
     box-shadow: 0 5px 30px 0 rgba(0, 0, 0, .05);
 }
 
-code { background: #E6E6E6; }
+code { background: var(--fr-code-bg); }
 
 pre {
-    background: white;
+    background: var(--fr-surface);
     margin: 40px 0;
 }
 
@@ -164,18 +215,18 @@ code, pre {
 }
 
 blockquote {
-    background-color: #FFF;
+    background-color: var(--fr-surface);
     padding: 5px 10px;
     border-radius: 4px;
     box-shadow: 0 5px 30px 0 rgba(0, 0, 0, .05);
-    border-left: 6px solid #49AEE6;
+    border-left: 6px solid var(--fr-blockquote-accent);
 }
 
 input:not([type=submit]):not([type=reset]):not([type=radio]):not([type=checkbox]),
 textarea, select {
-    border: 2px solid #000;
-    background: #FFF;
-    color: #000;
+    border: 2px solid var(--fr-border);
+    background: var(--fr-surface);
+    color: var(--fr-surface-text);
     border-radius: 3px;
     margin: 7px 0;
     height: 45px;
@@ -193,12 +244,12 @@ textarea, select {
 
 input[type=checkbox], input[type=radio] {
     font-size: 1em;
-    border: .125em solid #000;
-    background: #FFF;
+    border: .125em solid var(--fr-border);
+    background: var(--fr-surface);
     cursor: pointer;
     height: 1.2em;
     width: 1.2em;
-    box-shadow: inset 0 0 0 .125em #FFF;
+    box-shadow: inset 0 0 0 .125em var(--fr-surface);
     vertical-align: text-top;
     margin: 0 .3em;
     padding: 0;
@@ -206,15 +257,15 @@ input[type=checkbox], input[type=radio] {
 }
 
 input[type=checkbox]:checked, input[type=radio]:checked {
-    background: #367bf0;
+    background: var(--fr-accent);
 }
 
 label:hover > input[type=checkbox]:checked, label:hover > input[type=radio]:checked {
-    box-shadow: inset 0 0 0 0.1875em #FFF;
+    box-shadow: inset 0 0 0 0.1875em var(--fr-surface);
 }
 
 label:hover > input[type=checkbox]:not(:checked), label:hover > input[type=radio]:not(:checked) {
-    background: #b8174c;
+    background: var(--fr-danger);
 }
 
 input[type=checkbox] {
@@ -254,8 +305,8 @@ label.checktext input {
 label.checktext span {
     display: inline-block;
     cursor: pointer;
-    color: #5c616c;
-    border-bottom: .125em solid #5c616c;
+    color: var(--fr-text);
+    border-bottom: .125em solid var(--fr-rule);
     margin: .7em .625em;
     line-height: 1em;
     transition: transform .2s;
@@ -266,19 +317,19 @@ label.checktext input:not(:checked)+span:hover {
 }
 
 label.checktext input:checked + span {
-    color: #000;
+    color: var(--fr-surface-text);
     font-weight: bold;
     font-size: 2.5em;
     margin: -.25em .255em 0;
     transform: translateY(.12em);
-    border-color: #367bf0;
+    border-color: var(--fr-accent);
 }
 
 select {
     cursor: pointer;
     padding-right: 40px;
     text-align-last: center;
-    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOSIgaGVpZ2h0PSIxOSIgeD0iMCIgeT0iMCIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMTkgMTkiIHhtbDpzcGFjZT0icHJlc2VydmUiPgogPGcgdHJhbnNmb3JtPSJtYXRyaXgoMC4wMzM5MjgzNiwwLDAsMC4wMzM5MjgzNiwtNi43ODU2NTUyLDEuNjk2NzE2M2UtNSkiPgogIDxwYXRoIGQ9Ik0gNDgwLDM0NC4xODEgMjY4Ljg2OSwxMzEuODg5IGMgLTE1Ljc1NiwtMTUuODU5IC00MS4zLC0xNS44NTkgLTU3LjA1NCwwIC0xNS43NTQsMTUuODU3IC0xNS43NTQsNDEuNTcgMCw1Ny40MzEgbCAyMzcuNjMyLDIzOC45MzcgYyA4LjM5NSw4LjQ1MSAxOS41NjIsMTIuMjU0IDMwLjU1MywxMS42OTggMTAuOTkzLDAuNTU2IDIyLjE1OSwtMy4yNDcgMzAuNTU1LC0xMS42OTggTCA3NDguMTg2LDE4OS4zMiBjIDE1Ljc1NiwtMTUuODYgMTUuNzU2LC00MS41NzEgMCwtNTcuNDMxIC0xNS43NTYsLTE1Ljg2IC00MS4yOTksLTE1Ljg1OSAtNTcuMDUxLDAgeiIvPgogPC9nPgo8L3N2Zz4K) no-repeat right 10px center #FFF;
+    background: var(--fr-select-arrow) no-repeat right 10px center var(--fr-surface);
 }
 
 .onoffswitch {
@@ -299,8 +350,8 @@ select {
     width: 96px;
     display: inline-block;
     overflow: hidden;
-    background: #b8174c;
-    border: 3px solid #811035;
+    background: var(--fr-danger);
+    border: 3px solid var(--fr-danger-border);
     border-radius: 23px;
     transition: border-color 0.2s;
 }
@@ -316,7 +367,7 @@ select {
     width: 34px;
     border-radius: 17px;
     margin: 3px;
-    background: #FFF;
+    background: var(--fr-knob);
 }
 
 .onoffswitch input {
@@ -331,7 +382,7 @@ select {
 }
 
 .onoffswitch span span::before, .onoffswitch span span::after {
-    color: #FFF;
+    color: var(--fr-on-accent);
     float: left;
     width: 50%;
     height: 40px;
@@ -344,13 +395,13 @@ select {
 .onoffswitch span span::before {
     content: attr(data-on);
     padding-left: 20px;
-    background: #367bf0;
+    background: var(--fr-accent);
 }
 
 .onoffswitch span span::after {
     content: attr(data-off);
     padding-right: 20px;
-    background: #b8174c;
+    background: var(--fr-danger);
     text-align: right;
 }
 
@@ -363,8 +414,8 @@ select {
 }
 
 .onoffswitch input:checked + span {
-    background: #367bf0;
-    border-color: #2656a8;
+    background: var(--fr-accent);
+    border-color: var(--fr-accent-border);
 }
 
 button,
@@ -375,15 +426,15 @@ input[type=reset],
 .green-button, input.green-button {
     border-radius: 4px;
     font-weight: bold;
-    color: #FFF;
+    color: var(--fr-btn-text);
     margin-top: 7px;
     text-align: center;
     cursor: pointer;
     font-size: 16px;
     height: 45px;
     width: 120px;
-    border: 3px solid #272a34;
-    background: #737680;
+    border: 3px solid var(--fr-btn-border);
+    background: var(--fr-btn-bg);
     line-height: 40px;
     display: block;
     transition: border .2s .2s, text-shadow .2s .2s, background .2s .2s, transform .2s, color .2s .2s, box-shadow .2s;
@@ -401,8 +452,8 @@ input[type=reset],
     font-size: 35px;
     line-height: 56px;
     text-align: center;
-    color: #FFF;
-    background: #8c42ab;
+    color: var(--fr-on-accent);
+    background: var(--fr-purple);
     font-weight: 100;
     display: block;
     transition: text-shadow .2s .2s, background .2s .2s, transform .2s, color .2s .2s, box-shadow .2s;
@@ -428,39 +479,39 @@ input[type=reset]:active, input[type=reset].active,
 .green-button:active, input.green-button:active, .green-button.active, input.green-button.active,
 .rounded-button:active, .rounded-button.active {
     box-shadow: none;
-    border-color: #000;
-    color: #000;
+    border-color: var(--fr-btn-active-border);
+    color: var(--fr-btn-active-text);
     text-shadow: none;
-    background: #FFF;
+    background: var(--fr-btn-active-bg);
     transition: transform .2s, box-shadow .2s;
 }
 
 .rounded-button:active, .rounded-button.active { box-shadow: 0 0 10px rgba(0, 0, 0, .6); }
 
 .blue-button, input.blue-button {
-    background: #367bf0;
-    border-color: #2656a8;
+    background: var(--fr-accent);
+    border-color: var(--fr-accent-border);
 }
 
 .red-button, input.red-button {
-    background: #b8174c;
-    border-color: #811035;
+    background: var(--fr-danger);
+    border-color: var(--fr-danger-border);
 }
 
 .green-button, input.green-button {
-    background: #19a187;
-    border-color: #12715f;
+    background: var(--fr-success);
+    border-color: var(--fr-success-border);
 }
 
 .paper {
     font-size: 16px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
-    border: 1px solid rgba(0, 0, 0, .14);
+    border: 1px solid var(--fr-muted-border);
     padding: 10px 20px;
-    background-color: #FFF;
+    background-color: var(--fr-surface);
     margin-top: 20px;
     min-height: 100px;
-    color: #000;
+    color: var(--fr-surface-text);
 }
 
 .with-shadow {
