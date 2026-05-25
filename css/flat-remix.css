@@ -61,16 +61,6 @@ input:focus::placeholder, textarea:focus::placeholder {
     opacity: .2;
 }
 
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-    opacity: 1;
-    transition: opacity .2s;
-    color: inherit;
-}
-
-input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
-    opacity: .2;
-}
-
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
@@ -83,11 +73,6 @@ input[type="search"]::-webkit-search-results-decoration {
     border: 0;
 }
 
-::-moz-selection {
-    color: var(--fr-selection-text);
-    background: var(--fr-selection-bg);
-}
-
 ::selection {
     color: var(--fr-selection-text);
     background: var(--fr-selection-bg);
@@ -97,7 +82,6 @@ input[type="search"]::-webkit-search-results-decoration {
     box-sizing: border-box;
     outline: none;
     appearance: none;
-    -webkit-appearance: none;
     -webkit-tap-highlight-color: transparent !important;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
     -webkit-touch-callout: none;
@@ -113,9 +97,6 @@ body {
     cursor: default;
     user-select: none;
     -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
 }
 
 a:link, a:visited, a:active, a {
@@ -209,9 +190,6 @@ code, pre {
     user-select: text;
     -webkit-touch-callout: text;
     -webkit-user-select: text;
-    -khtml-user-select: text;
-    -moz-user-select: text;
-    -ms-user-select: text;
 }
 
 blockquote {
@@ -237,9 +215,6 @@ textarea, select {
     user-select: text;
     -webkit-touch-callout: text;
     -webkit-user-select: text;
-    -khtml-user-select: text;
-    -moz-user-select: text;
-    -ms-user-select: text;
 }
 
 input[type=checkbox], input[type=radio] {
@@ -278,13 +253,11 @@ input[type=radio] {
 
 input[type=number] {
     appearance: textfield;
-    -moz-appearance: textfield;
 }
 
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
     appearance: none;
-    -webkit-appearance: none;
     margin: 0;
 }
 
@@ -523,7 +496,4 @@ input[type=reset]:active, input[type=reset].active,
     user-select: text;
     -webkit-touch-callout: text;
     -webkit-user-select: text;
-    -khtml-user-select: text;
-    -moz-user-select: text;
-    -ms-user-select: text;
 }
