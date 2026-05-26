@@ -1,0 +1,13 @@
+name: Validate CSS
+
+on: [push, pull_request]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 26
+      - run: npx -y csstree-validator css/flat-remix.css
