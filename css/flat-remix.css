@@ -188,7 +188,7 @@ code, pre {
     line-height: 2em;
     cursor: auto;
     user-select: text;
-    -webkit-touch-callout: text;
+    -webkit-touch-callout: default;
     -webkit-user-select: text;
 }
 
@@ -213,7 +213,7 @@ textarea, select {
     font-weight: bold;
     cursor: text;
     user-select: text;
-    -webkit-touch-callout: text;
+    -webkit-touch-callout: default;
     -webkit-user-select: text;
 }
 
@@ -494,6 +494,6 @@ input[type=reset]:active, input[type=reset].active,
 .selectable {
     cursor: auto;
     user-select: text;
-    -webkit-touch-callout: text;
+    -webkit-touch-callout: default;
     -webkit-user-select: text;
 }
